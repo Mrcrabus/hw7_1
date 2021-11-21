@@ -42,13 +42,12 @@ class Slider {
 class NiceSlider extends Slider {
     constructor(selector, duration) {
         super(selector);
-        this.next = super.next;
         this.swapImg(duration)
     }
 
     swapImg(duration = 3000) {
         setInterval(() => {
-            this.next()
+            super.next()
         }, duration);
 
     }
