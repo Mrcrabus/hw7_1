@@ -42,8 +42,8 @@ class Slider {
 }
 
 class NiceSlider extends Slider {
-    constructor(...args) {
-        super(...args);
+    constructor(selector) {
+        super(selector);
         this.next = super.next;
     }
 
