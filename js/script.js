@@ -4,11 +4,9 @@ window.addEventListener('load', function () {
 
 
     let slider1 = new NiceSlider('.gallery-1')
-    slider1.swapImg()
 
 
-    let slider2 = new NiceSlider('.gallery-2');
-    slider2.swapImg(1550)
+    let slider2 = new NiceSlider('.gallery-2', 1550);
 
 });
 
@@ -42,9 +40,10 @@ class Slider {
 }
 
 class NiceSlider extends Slider {
-    constructor(selector) {
+    constructor(selector, duration) {
         super(selector);
         this.next = super.next;
+        this.swapImg(duration)
     }
 
     swapImg(duration = 3000) {
